@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+  <include file="$(find abb_irb4400_support)/launch/load_irb4400l_30_243.launch"/>
+  
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find proy_pkg)/config/view_robot.rviz" required="true" />
+
+</launch>
