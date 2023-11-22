@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find abb_resources)/urdf/common_materials.xacro"/>
+
+  <xacro:macro name="abb_irb4400l_30_243" params="prefix">
+    <!-- link list -->
+
+    <link name="${prefix}base_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://abb_irb4400_support/meshes/irb4400l_30_243/visual/base_link.stl"/>
+        </geometry>
+        <xacro:material_abb_orange />
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://abb_irb4400_support/meshes/irb4400l_30_243/collision/base_link.stl"/>
+        </geometry>
+        <xacro:material_abb_yellow />
+      </collision>
+      
+      <inertial>
+           <mass value="60.266"/>
+           <inertia ixx="2.13" ixy="0.0" ixz="0.0" iyy="2.665" iyz="0.0" izz="3.587"/>
+      </inertial> 
+
+    </link>
+
+
+    <link name="${prefix}link_1">
+    
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://abb_irb4400_support/meshes/irb4400l_30_243/visual/link_1.stl"/>
+        </geometry>
+        <xacro:material_abb_orange />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://abb_irb4400_support/meshes/irb4400l_30_243/collision/link_1.stl"/>
+        </geometry>
+        <xacro:material_abb_yellow />
+      </collision>
+
+      <inertial>
+           <mass value="242.08"/>
+           <inertia ixx="81.641" ixy="0.0" ixz="0.0" iyy="77.029" iyz="0.0" izz="27.631"/>
+      </inertial> 
+
+    </link>
+
+
+    <link name="${prefix}link_2">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://abb_irb4400_support/meshes/irb4400l_30_243/visual/link_2.stl"/>
+        </geometry>
+        <xacro:material_abb_orange />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://abb_irb4400_support/meshes/irb4400l_30_243/collision/link_2.stl"/>
+        </geometry>
+        <xacro:material_abb_yellow />
+      </collision>
+
+      <inertial>
+           <mass value="108.861"/>
+           <inertia ixx="187.884" ixy="0.0" ixz="0.0" iyy="198.517" iyz="0.0" izz="12.300"/>
+      </inertial> 
+    </link>
+
+
+    <link name="${prefix}link_3">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://abb_irb4400_support/meshes/irb4400l_30_243/visual/link_3.stl"/>
+        </geometry>
+        <xacro:material_abb_orange />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://abb_irb4400_support/meshes/irb4400l_30_243/collision/link_3.stl"/>
+        </geometry>
+        <xacro:material_abb_yellow />
+      </collision>
+
+      <inertial>
+           <mass value="131.343"/>
+           <inertia ixx="584.225" ixy="0.0" ixz="0.0" iyy="688.283" iyz="0.0" izz="108.136"/>
+      </inertial> 
+    </link>
+
+      <!-- start new link --> 
+    <link name="link_4n">
+        <visual>
+            <geometry>
+                <mesh filename="package://abb_irb4400_support/meshes/irb4400l_30_243/visual/link_4n.stl"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <xacro:material_abb_orange />
+        </visual>
+        
+        <collision>
+            <geometry>
+                <mesh filename="package://abb_irb4400_support/meshes/irb4400l_30_243/collision/link_4n.stl"/>
+            </geometry>
+        </collision>
+
+        <inertial>
+           <mass value="5.696"/>
+           <inertia ixx="24.452" ixy="0.0" ixz="0.0" iyy="45.056" iyz="0.0" izz="20.617"/>
+        </inertial>
+    </link>
+    <!-- 0.8 metro de largo. -->
+    <!-- diametro 160.000 mm-->
+    
+    <!-- end new link -->
+
+    <link name="${prefix}link_4">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://abb_irb4400_support/meshes/irb4400l_30_243/visual/link_4.stl"/>
+        </geometry>
+        <xacro:material_abb_orange />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://abb_irb4400_support/meshes/irb4400l_30_243/collision/link_4.stl"/>
+        </geometry>
+        <xacro:material_abb_yellow />
+      </collision>
+
+      <inertial>
+           <mass value="1.687"/>
+           <inertia ixx="7.352" ixy="0.0" ixz="0.0" iyy="15.456" iyz="0.0" izz="8.111"/>
+      </inertial> 
+    </link>
+
+
+    <link name="${prefix}link_5">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://abb_irb4400_support/meshes/irb4400l_30_243/visual/link_5.stl"/>
+        </geometry>
+        <xacro:material_abb_orange />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://abb_irb4400_support/meshes/irb4400l_30_243/collision/link_5.stl"/>
+        </geometry>
+        <xacro:material_abb_yellow />
+      </collision>
+      <inertial>
+           <mass value="2.918"/>
+           <inertia ixx="12.210" ixy="0.0" ixz="0.0" iyy="27.389" iyz="0.0" izz="15.193"/>
+      </inertial>
+    </link>
+
+
+    <link name="${prefix}link_6">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://abb_irb4400_support/meshes/irb4400l_30_243/visual/link_6.stl"/>
+        </geometry>
+        <xacro:material_abb_black />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://abb_irb4400_support/meshes/irb4400l_30_243/collision/link_6.stl"/>
+        </geometry>
+        <xacro:material_abb_yellow />
+      </collision>
+
+      <inertial>
+           <mass value="0.683"/>
+           <inertia ixx="0.684" ixy="0.0" ixz="0.0" iyy="1.612" iyz="0.0" izz="0.93"/>
+      </inertial> 
+
+    </link>
+
+
+    <link name="${prefix}tool0"/>
+    <!-- end of link list -->
+
+  
+  
+
+    <!-- joint list -->
+    <joint name="${prefix}joint_1" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="${prefix}base_link"/>
+      <child link="${prefix}link_1"/>
+      <axis xyz="0 0 1"/>
+      <limit effort="0" lower="-2.87979" upper="2.87979" velocity="2.618"/>
+    </joint>
+
+
+    <joint name="${prefix}joint_2" type="revolute">
+      <origin xyz="0.2 0 0.68" rpy="0 0 0"/>
+      <parent link="${prefix}link_1"/>
+      <child link="${prefix}link_2"/>
+      <axis xyz="0 1 0"/>
+      <limit effort="0" lower="-1.2217" upper="1.658" velocity="2.0944"/>
+      </joint>
+
+
+    <joint name="${prefix}joint_3" type="revolute">
+      <origin xyz="0 0 0.89" rpy="0 0 0"/>
+      <parent link="${prefix}link_2"/>
+      <child link="${prefix}link_3"/>
+      <axis xyz="0 1 0"/>
+      <limit effort="0" lower="-1.0472" upper="1.1345" velocity="2.0944"/>
+    </joint>
+
+    <joint name="${prefix}joint_4" type="revolute">
+      <origin xyz="0.63 0 0.15" rpy="0 0 0"/>
+      <parent link="${prefix}link_3"/>
+      <child link="${prefix}link_4n"/>
+      <axis xyz="1 0 0"/>
+      <limit effort="0" lower="-3.49" upper="3.49" velocity="3.927"/>
+    </joint>
+
+    <!-- .............................................................................. -->
+    <!-- joinit new -->
+
+    <joint name="joint_4n" type="prismatic">
+        <parent link="${prefix}link_4n"/>
+        <child link="${prefix}link_4"/>
+        <origin xyz="1.10 0 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0" />
+        <limit effort="10" lower="-0.35" upper="0.35" velocity="0.1" />
+    </joint>
+    <!-- joint new end -->
+    <!-- .............................................................................. -->
+        
+    <joint name="${prefix}joint_5" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="${prefix}link_4"/>
+      <child link="${prefix}link_5"/>
+      <axis xyz="0 1 0"/>
+      <limit effort="0" lower="-2.0944" upper="2.0944" velocity="4.3633"/>
+    </joint>
+
+    <joint name="${prefix}joint_6" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="${prefix}link_5"/>
+      <child link="${prefix}link_6"/>
+      <axis xyz="1 0 0"/>
+      <limit effort="0" lower="-6.9813" upper="6.9813" velocity="5.7596"/>
+    </joint>
+
+
+    <joint name="${prefix}joint_6-tool0" type="fixed">
+      <parent link="${prefix}link_6"/>
+      <child link="${prefix}tool0"/>
+      <origin xyz="0.14 0 0" rpy="0 0 0"/>
+    </joint>
+    <!-- end of joint list -->
+
+    <!-- ROS base_link to ABB World Coordinates transform -->
+    <link name="${prefix}base" />
+    <joint name="${prefix}base_link-base" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="${prefix}base_link"/>
+      <child link="${prefix}base"/>
+    </joint>
+  </xacro:macro>
+</robot>
